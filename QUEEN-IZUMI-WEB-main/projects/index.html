@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bot setup</title>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <button onclick="alert('Hello People! Welcome to My Project.')">
+        <div class="share-button">
+          <i class="fa-solid fa-hand"></i>
+          <!-- <p>Share</p> -->
+        </div>
+      </button>
+    </header>
+
+    <div class="container">
+      <!-- <div class="image-container">
+        <img
+          src="img/foto_gue.jpg"
+          alt="Zidan Herlangga"
+          height="110"
+          width="110"
+        /> 
+      </div> -->
+      <h1 class="name">@Bot creating methods</h1>
+
+      <!-- 1 -->
+<a
+        href="https://github.com/VajiraTech/QUEEN-IZUMI-MD"
+        class="tile"
+        data-aos="zoom-in"
+        data-aos-duration="500"
+      >
+        <div class="icon" link="https://github.com/VajiraTech/QUEEN-IZUMI-MD">
+          <i class=""></i>
+        </div>
+        <p>Queen Izumi url</p>
+        <div class="tile-share-button">
+          <i class="fa-solid fa-share"></i>
+        </div>
+      </a>
+      
+<!-- 2 -->
+      
+<a
+        href="https://github.com/VajiraTech/QUEEN-IZUMI-MD/fork"
+        class="tile"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
+        <div class="icon" link="https://github.com/VajiraTech/QUEEN-IZUMI-MD/fork">
+          <i class=""></i>
+        </div>
+        <p>Fork the repo</p>
+        <div class="tile-share-button">
+          <i class="fa-solid fa-share"></i>
+        </div>
+      </a>
+
+      <!-- 3 -->
+      <a
+        href="https://isumi-session-6a911c272361.herokuapp.com/"
+        class="tile"
+        data-aos="zoom-in"
+        data-aos-duration="1500"
+      >
+        <div class="icon" link="https://isumi-session-6a911c272361.herokuapp.com/">
+          <i class=""></i>
+        </div>
+        <p>Scan qr code</p>
+        <div class="tile-share-button">
+          <i class="fa-solid fa-share"></i>
+        </div>
+      </a>
+
+      <!-- 4 -->
+      <a
+        href="https://vajirarathnayaka.github.io/QUEEN-IZUMI-WEB/assets/deployments.html"
+        class="tile"
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+      >
+        <div class="icon" link="https://vajirarathnayaka.github.io/QUEEN-IZUMI-WEB/assets/deployments.html">
+          <i class=""></i>
+        </div>
+        <p>Deployment Methods</p>
+        <div class="tile-share-button">
+          <i class="fa-solid fa-share"></i>
+        </div>
+      </a>
+
+      
+
+      <!-- 5 -->
+      <a href="https://chat.whatsapp.com/ED85HllwrN32OaL5kmbMb0" class="tile" data-aos="zoom-in" data-aos-duration="2500">
+        <div class="icon" link="#">
+          <i class=""></i>
+        </div>
+        <p>Support group</p>
+        <div class="tile-share-button">
+          <i class="fa-solid fa-share"></i>
+        </div>
+      </a>
+      
+      <!-- 6 -->
+      <a href="https://chat.whatsapp.com/BQAz3mjXTiB5vn0vSOwLOJ" class="tile" data-aos="zoom-in" data-aos-duration="3000">
+        <div class="icon" link="#">
+          <i class=""></i>
+        </div>
+        <p>Main group</p>
+        <div class="tile-share-button">
+          <i class="fa-solid fa-share"></i>
+        </div>
+      </a>
+      
+      <footer class="footer">
+        <span id="typing"></span>
+      </footer>
+    </div>
+
+    <!-- My JS -->
+    <script src="js/app.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Typeit Open -->
+    <!-- TypeitJS -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script>
+      const nameInput = prompt("Whats your name");
+      alert("Hello " + nameInput);
+
+      new TypeIt("#typing", {
+        speed: 50,
+        waitUntilVisible: true,
+      })
+        .type("Mede", { delay: 500 })
+        .move(-2)
+        .delete(1)
+        .type("a")
+        .move(null, { to: "END" })
+        .type(" wit", { delay: 100 })
+        .pause(300)
+        .type(" Luv")
+        .move(-1)
+        .delete(1)
+        .type("o")
+        .move(null, { to: "END" })
+        .type("e")
+        .pause(300)
+        .move(-5)
+        .type("h")
+        .move(null, { to: "END" })
+        .type(" ❣")
+        .go();
+    </script>
+  </body>
+</html>
