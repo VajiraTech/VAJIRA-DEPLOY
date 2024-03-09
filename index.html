@@ -1,143 +1,213 @@
-<!DOCTYPE html>
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://gabutyanz.xyz/style.c">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+        <link rel="icon" type="image/png" sizes="16x16" href="img/gbt.png">
 
-<html lang="en" >
-
-<head>
-
-
-  <meta charset="UTF-8">
-
-  <title>QUEEN-IZUMI-WEB</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-
-
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./style.css">
-
-
-</head>
-
-<body>
-
-
-<!-- partial:index.partial.html -->
-
-<section class="wrapper">
-
-  
-  <!-- BEGIN: menu -->
-
-
-  <nav class="menu">
-
-    <ul class="menu__list">
-
-      <li class="menu__item  js-modify  active" data-target=".card" data-effect="zoom">Zoom out</li>
-
-      <li class="menu__item  js-modify" data-target=".card" data-effect="blur">Blur</li>
-
-      <li class="menu__item  js-modify" data-target=".card" data-effect="color">Colors</li>
-
-    </ul>
-
-  </nav>
-
-
-
-  <!-- END: menu -->
-
-
-  
-  <!-- BEGIN: card -->
-
-
-  <div class="card" data-effect="zoom">
-
-    <button class="card__save  js-save" type="button">
-
-      <i class="fa  fa-bookmark"></i>
-
-     </button>
-
-
-    <figure  class="card__image">
-
-      <img src="img.jpg" alt="Short description">
-
-    </figure>
-
-
-    <div class="card__header">
-
-      <figure class="card__profile">
-
-        <img src="img.jpg" alt="Short description">
-
-      </figure>
-
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Situs web REST API yang menyediakan berbagai macam Api untuk mengembangkan aplikasimu.">
+    <meta name="robots" content="archive, follow, imageindex, index, odp, snippet, translate">
+    <meta name="author" content="Gbt`Yanz">
+    <title> ABU - REST API</title>
+    <meta property="og:site_name" name="og:site_name" content="ABU - REST API">
+    <meta property="og:title" name="og:title" content="ABU - REST API">
+    <meta property="og:url" name="og:url" content="gabutyanz.xyz">
+    <meta property="og:image" name="og:image" content="img/user.png">
+    <meta property="og:description" name="og:description" content="Situs web REST API yang menyediakan berbagai macam fitur untuk mengembangkan aplikasimu.">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9653164797968052"
+     crossorigin="anonymous"></script>
+    </head>
+    <style>
+    *{
+      margin: 0;
+      font-family: Ubuntu, sans-serif;
+    }
+      body{
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      video{
+        width: 390px;
+        height: 690px;
+        display: none;
+      }
+      .a{
+		    position: static;
+    	}
+    	.b{
+		  position: absolute;
+		  width: 100%;
+		  height: 100%;
+		  left: 0px;
+		  top: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      transition: 0.5s;
+  	}
+.text {
+    position: absolute
+}
+.status {
+    position: relative;
+    animation: animetop .8s
+}
+.readdocs {
+    position: relative;
+    animation: animebot .8s;
+    text-align: center
+}
+@keyframes animetop {
+    0% {
+        top: -200px;
+        opacity: 0
+    }
+    100% {
+        top: 0;
+        opacity: 1
+    }
+}
+@keyframes animebot {
+    0% {
+        top: 200px;
+        opacity: 0
+    }
+    100% {
+        top: 0;
+        opacity: 1
+    }
+}
+p {
+    color: rgba(255, 255, 255, .8);
+    letter-spacing: .15em;
+    font-size: 15px!important;
+    font-weight: 600
+}
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .5)
+}
+a.sosmed {
+    color: rgba(255, 255, 255, .8)
+}
+a:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1)
+}
+.typed-text {
+    color: #0f0
+}
+.cursor {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 1.5s steps(40, end), blink-caret .75s step-end infinite
+}
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange
+    }
+}
+hr {
+    margin: 10px auto;
+    position: relative;
+    background: rgba(255, 255, 255, .5);
+    width: 80%;
+    height: 2px
+}
+.bottom {
+    position: fixed;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto
+}
+    </style>
+    <body>
+      <div class="container">
+        <div class="a">
+        <video id="myVideo">
+          <source src="https://g.top4top.io/m_25933jugi0.mp4" type="video/mp4">
+        </video>
+        </div>
+        <div class="b">
+          <div class="text">
+        <div class="status">
+            <p>API STATUS : <span class="typed-text"></span><span class="cursor typing"></span></p>
+        </div>
+        <hr>
+        <div class="readdocs">
+            <p>CLICK <a href="QUEEN-IZUMI-MD-main/index.html" class="docs">HERE.</a></p>
+        </div>
     </div>
-
-
-    <div class="card__body">
-
-      <h3 class="card__name">QUEEN-IZUMI-MD</h3>
-
-      <p class="card__job">Website of Queen Izumi Md</p>
-
-      <p class="card__bio"> The best multi device bot created by vajira & timasha .</p>
-
+    <div class="bottom">
+        <p>
+            <a href="http://github.com/Afx-Abu/Abu-MD" rel="noopener noreferrer" class="sosmed"><i class="mdi mdi-github"></i> GitHub</a>
+        </p>
     </div>
+        </div>
+      </div>
+      <script>
+      var vid = document.getElementById("myVideo");
+      function play(){
+              vid.play();  
+                        }
+      
+            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+                        const swals = Swal.mixin({
+                            allowOutsideClick: false,
+                        });
+                        async function mulai(){
+                                await swals.fire('Hallo');
+                                setTimeout(showDiv, 400);vid.play();             
+                        }
+                        mulai();
+            function showDiv() {
+              document.getElementById("myVideo").style.display='block';
+            }
+            
+            const typedTextSpan = document.querySelector(".typed-text"),
+    textArray = ["ACTIVE~", "ONLINE~"],
+    typingDelay = 200,
+    erasingDelay = 100,
+    newTextDelay = 2e3;
+let textArrayIndex = 0,
+    charIndex = 0;
 
+function type() { charIndex < textArray[textArrayIndex].length ? (typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex), charIndex++, setTimeout(type, 200)) : setTimeout(erase, 2e3) }
 
-    <div class="card__footer">
+function erase() { charIndex > 0 ? (typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1), charIndex--, setTimeout(erase, 100)) : (textArrayIndex++, textArrayIndex >= textArray.length && (textArrayIndex = 0), setTimeout(type, 1300)) }
+document.addEventListener("DOMContentLoaded", (function() { setTimeout(type, 2250) }));
 
-      <p class="card__date">
-    <a href="QUEEN-IZUMI-WEB-main/index.html">
-
-      <span>
-</span>
-
-      <span>
-</span>
-
-      <span>
-</span>
-
-      <span>
-</span>
-<center>
-      ENTER HERE
-</center>
-    </a>
-
-
-
-</div>
-</a>
-</p>
-      <p class=""></p>
-
-    </div>
-
-
-
-  </div>
-
-  <!-- END: card -->
-
-  
-</section>
-
-<!-- partial -->
-
-  <script  src="./script.js">
-</script>
-
-
-</body>
-
+$(document).ready((function() {
+    $(".changeprofile").submit((function(e) {
+        var formObj, formURL = $(this).attr("action"),
+            formData = new FormData(this);
+        $.ajax({ url: formURL, type: "POST", data: formData, contentType: !1, cache: !1, processData: !1, beforeSend: function() { $("button").attr("disabled", "disabled"), $("input").attr("disabled", "disabled"), $("a").attr("disabled", "disabled"), $(".inibutton").html('<i class="fas fa-spinner fa-spin"></i> Wait') }, success: function(data) { data.includes("Success") ? ($("button").removeAttr("disabled", "disabled"), $("a").removeAttr("disabled", "disabled"), $("input").removeAttr("disabled", "disabled"), $(".inibutton").html("Save"), $.notify({ icon: "tim-icons icon-check-2", message: data }, { type: "success", timer: 3e3, placement: { from: "top", align: "right" } }), window.location = window.location) : ($("button").removeAttr("disabled", "disabled"), $("a").removeAttr("disabled", "disabled"), $("input").removeAttr("disabled", "disabled"), $(".inibutton").html("Save"), $.notify({ icon: "tim-icons icon-simple-remove", message: data }, { type: "danger", timer: 3e3, placement: { from: "top", align: "right" } })) } }), e.preventDefault()
+    }))
+}))
+            </script>
+    </body>
+  <script src="https://gabutyanz.xyz/src/images/script.js"></script>
 </html>
