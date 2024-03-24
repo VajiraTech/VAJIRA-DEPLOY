@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Heroku Deployment</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  	body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 2em;
+  margin-bottom: 2px;
+}
+
+.input {
+  width: calc(100%-20px);
+  padding: 10px;
+  font-size: 17px;
+  color: #fff;
+  border: none;
+  border-radius: .5em;
+  margin-top: 10px;
+  background-color: #444;
+}
+
+.button {
+  width: 100%;
+  border: none;
+  background-color: #1363DF;
+  text-decoration: none;
+  padding: 15px;
+  padding-bottom: 17px;
+  font-size: 17px;
+  color: #fff;
+  border-radius: .5em;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-blue {
+  color: #1363DF;
+}
+
+.alert {
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="icon"><i class="fas fa-user icon-blue"></i></div>
+    <h2>Welcome User</h2>
+    <form onsubmit="return deployToHeroku();">
+      <input placeholder="Enter Your GitHub Username" class="input" id="githubUsername" type="text">
+      <button class="button" type="submit">Deploy to Heroku</button>
+    </form>
+  </div>
+  <script>
+window.onload = function() {
+    alert("Hello! Just wanted to give you a quick update. Unfortunately, we won't be able to deploy any more updates on Heroku due to their increased policies checking. We'll look into additional options and keep you updated. Thank you");
+    }
+
+async function doesGitHubRepoExist(owner, repo) {
+  const apiUrl = `https://api.github.com/repos/${owner}/${repo}`;
+  try {
+    const response = await fetch(apiUrl);
+
+    if (response.status === 200) {
+      return true;
+    } else if (response.status === 404) {
+      return false;
+    } else {
+      throw new Error(`Unexpected response: ${response.status}`);
+    }
+  } catch (error) {
+    console.error(`Error checking GitHub repository: ${error.message}`);
+    return false;
+  }
+}
+
+function deployToHeroku() {
+  var usernameInput = document.getElementById("githubUsername");
+  var username = usernameInput.value.trim().replace(/\s+/g, ''); // Remove leading/trailing spaces and internal spaces
+  var repoName = 'VAJIRA-MD';
+  
+  doesGitHubRepoExist(username, repoName).then((exists) => {
+    if (exists) {
+      var herokuURL = `https://heroku.com/deploy?template=https://github.com/${username}/${repoName}`;
+      window.location.href = herokuURL;
+    } else {
+      console.log('Repository does not exist or error occurred.');
+      window.location.href = '/git/fork';
+    }
+  });
+
+  return false;
+}
+</script>
+</body>
+
+</html>
