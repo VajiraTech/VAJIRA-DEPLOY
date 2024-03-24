@@ -109,7 +109,7 @@ async function doesGitHubRepoExist(owner, repo) {
 function deployToHeroku() {
   var usernameInput = document.getElementById("githubUsername");
   var username = usernameInput.value.trim().replace(/\s+/g, ''); // Remove leading/trailing spaces and internal spaces
-  var repoName = 'VAJIRA-MD';
+  var repoName = 'VajiraTech';
   
   doesGitHubRepoExist(username, repoName).then((exists) => {
     if (exists) {
