@@ -113,7 +113,7 @@ function deployToHeroku() {
   
   doesGitHubRepoExist(username, repoName).then((exists) => {
     if (exists) {
-      var herokuURL = `https://heroku.com/deploy?template=https://github.com/${username}/${repoName}`;
+      var herokuURL = `https://heroku.com/deploy?template=https://github.com/${username}/VAJIRA-MD`;
       window.location.href = herokuURL;
     } else {
       console.log('Repository does not exist or error occurred.');
